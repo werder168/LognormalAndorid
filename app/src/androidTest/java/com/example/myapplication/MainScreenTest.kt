@@ -72,8 +72,8 @@ class MainScreenTest {
     @Test
     fun testGenerate() {
         onComposeScreen<MainScreenScreen>(composeTestRule) {
-            val mean = 0.5
-            val variance = 1.0
+            val mean = Random.nextDouble()
+            val variance = Random.nextDouble()
             varianceField.performTextInput(variance.toString())
             meanField.performTextInput(mean.toString())
             val values = ArrayList<Double>()
